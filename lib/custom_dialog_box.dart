@@ -242,7 +242,7 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                     ? (CircularProgressIndicator(
                         semanticsLabel: 'Processing',
                       ))
-                    : FlatButton(
+                    : TextButton(
                         onPressed: () {
                           widget.paying != null && widget.paying == true
                               ? handlePayment()

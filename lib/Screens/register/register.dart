@@ -158,14 +158,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ? (CircularProgressIndicator(
                             semanticsLabel: 'Signing you up...',
                           ))
-                        : (RaisedButton(
+                        : (ElevatedButton(
                             onPressed: () {
                               handleRegister();
                             },
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(80.0)),
-                            textColor: Colors.white,
-                            padding: const EdgeInsets.all(0),
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(80.0)),
+                              // textStyle: (Colors.white),
+                              padding: const EdgeInsets.all(0),
+                            ),
                             child: Container(
                               alignment: Alignment.center,
                               height: 50.0,

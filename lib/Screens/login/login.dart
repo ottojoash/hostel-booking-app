@@ -136,12 +136,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         ? (CircularProgressIndicator(
                             semanticsLabel: 'Logging you in...',
                           ))
-                        : (RaisedButton(
+                        : (ElevatedButton(
                             onPressed: () => {executeLogin()},
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(80.0)),
-                            textColor: Colors.white,
-                            padding: const EdgeInsets.all(0),
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(80.0)),
+                              // textStyle: (Colors.white),
+                              padding: const EdgeInsets.all(0),
+                            ),
                             child: Container(
                               alignment: Alignment.center,
                               height: 50.0,
